@@ -17,7 +17,7 @@ export class SupabaseService {
     private readonly configService: ConfigService,
   ) {}
 
-  async getClient() {
+  getClient() {
     if (this.clientInstance) {
       return this.clientInstance;
     }
@@ -38,6 +38,7 @@ export class SupabaseService {
         },
       },
     );
+
     return this.clientInstance;
   }
 }
