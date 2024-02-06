@@ -6,7 +6,7 @@ import { ConfigService } from '@nestjs/config';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 import { ExtractJwt } from 'passport-jwt';
-import { Database } from '../../lib/database.types';
+import { Database } from './types/db.types';
 
 @Injectable({ scope: Scope.REQUEST })
 export class SupabaseService {
