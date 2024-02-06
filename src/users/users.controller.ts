@@ -1,5 +1,4 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { QueryData } from '@supabase/supabase-js';
 import { SupabaseGuard } from 'src/supabase/guards/supabase.guard';
 import { SupabaseService } from 'src/supabase/supabase.service';
 import { Tables } from 'src/supabase/types/db.types';
