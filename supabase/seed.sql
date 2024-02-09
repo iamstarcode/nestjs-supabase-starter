@@ -7,7 +7,6 @@ CREATE TABLE public.profiles (
 CREATE INDEX idx_profile_user_id ON public.profiles(id);
 
 alter table public.profiles enable row level security;
-
 create policy "Public profiles are viewable only by authenticated users"
     on profiles for select
     to authenticated
