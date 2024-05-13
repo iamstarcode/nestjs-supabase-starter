@@ -6,10 +6,7 @@ import { SupabaseService } from 'src/supabase/supabase.service';
 @Controller('user')
 @UseGuards(SupabaseGuard)
 export class UserController {
-  constructor(
-    private readonly userService: UserService,
-    private readonly supabaseService: SupabaseService,
-  ) {}
+  constructor(private readonly userService: UserService) {}
 
   @Get('/me')
   async getUser() {
