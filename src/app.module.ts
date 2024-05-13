@@ -5,8 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { SupabaseModule } from './supabase/supabase.module';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
-import { CoinbaseService } from './coinbase/coinbase.service';
-import { CoinbaseModule } from './coinbase/coinbase.module';
+import { UserService } from './user/user.service';
 
 @Module({
   imports: [
@@ -15,9 +14,8 @@ import { CoinbaseModule } from './coinbase/coinbase.module';
     }),
     SupabaseModule,
     UserModule,
-    CoinbaseModule,
   ],
-  controllers: [AppController, UserController],
-  providers: [AppService, CoinbaseService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
