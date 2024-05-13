@@ -28,6 +28,7 @@ export class SupabaseService {
       {
         auth: {
           persistSession: false,
+          autoRefreshToken: false,
         },
         global: {
           headers: {
